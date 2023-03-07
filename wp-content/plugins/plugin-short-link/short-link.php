@@ -58,12 +58,20 @@ function short_link_form($atts)
         <div class="moon"></div>
         <div id="preloader" style="display: none">
         </div>
-        <h2>SHORT LINK</h2>
-        <form action="" id="short_link_form">
+        <h2>SHORTER LINK</h2>
+        <form action="" method="get" id="short_link_form">
+        <div id="login_body">
             <input class="form-field" type="url" id="short_link_value" name="link" placeholder="Insert link"><br>
             <input type="hidden" id="short_link_nonce" value="' . $nonce . '"/>
             <input type="submit" value="Submit" id="btn_submit">
+        </div>
             <span id="error"></span>
+        <div id="short_url_copy" style="display:none;">
+                <span id="short_link_show"></span>
+                <span id="copy-quote">
+                    <img class="copy_icon" src="../wp-content/plugins/plugin-short-link/images/copy.png" alt="copy icon"  width="25" height="25" >
+				</span>
+        </div>
         </form>
     </div >
     </div>
@@ -117,6 +125,7 @@ function shortlink_scripts()
 {
     wp_enqueue_style('shortlink-style', plugin_dir_url(__FILE__) . 'css/main.css', array(), SHORT_LINK_VERSION);
     wp_enqueue_script('shortlink-scripts', plugin_dir_url(__FILE__) . 'js/main.js', array(), SHORT_LINK_VERSION, true);
+
     wp_localize_script(
         'shortlink-scripts',
         'shortlink_scripts_data',

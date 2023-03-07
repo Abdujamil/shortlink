@@ -1,3 +1,13 @@
+/*
+::-moz-selection {
+    background-color: #fffb00;
+    color: rgb(253, 255, 122);
+}
+::selection {
+    background-color: #fffb00;
+    color: rgb(253, 255, 122);
+} */
+
 body .is-layout-flex > *{
     display: none !important;
 }
@@ -23,17 +33,17 @@ body {
     overflow: hidden;
 }
 
-#short_link_form {
+/* #short_link_form {
     display: flex;
-}
+} */
 .login-box{
     position: relative;
 }
 
 .login-box input[type="link"] {
     font-size: 18px;
-     /*flex: 3 1 30ch;*/
- }
+    /*flex: 3 1 30ch;*/
+}
 
 .login-box input {
     border: none;
@@ -51,7 +61,7 @@ body {
     color: white;
     font-size: 20px;
     cursor: pointer;
- }
+}
 
 .login-box input[type="submit"]:hover{
     transition: all .3s ease-in-out;
@@ -100,7 +110,7 @@ body {
     color: #666666;
 }
 
-.entry-content span{
+.entry-content #error{
     color: red;
     font-size: 16px;
     display: block;
@@ -108,6 +118,31 @@ body {
     top: auto;
     bottom: 0;
 }
+
+.entry-content #short_link_show{
+    font-size: 16px;
+    display: block;
+    /* position: absolute;
+    top: auto;
+    bottom: 0; */
+}
+
+.entry-content #short_url_copy{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+#short_url_copy img{
+    cursor: pointer;
+}
+
+.entry-content #login_body{
+    display: flex;
+    margin: 20px 0 20px 0;
+}
+
 
 
 .entry-content p{
@@ -167,7 +202,7 @@ body {
     width: 100%;
     padding: 8px 16px;
     line-height: 25px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
     font-family: inherit;
     border-radius: 6px;
